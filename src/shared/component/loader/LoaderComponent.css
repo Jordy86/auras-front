@@ -1,0 +1,52 @@
+@import url("../../../styles/_variables.css");
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border: 2px solid var(--primary-color);
+  box-sizing: border-box;
+  border-radius: 50%;
+  display: grid;
+  animation: l11 1.5s infinite linear;
+  transform-origin: 50% 80%;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  border: inherit;
+  border-radius: 50%;
+  animation: inherit;
+  animation-duration: 1s;
+  transform-origin: inherit;
+}
+
+.loader:before {
+  border-color: var(--success-color);
+}
+
+.loader:after {
+  border-color: var(--default-color);
+}
+
+.loader:after {
+  --s:-1;
+}
+@keyframes l11 {
+   100% {transform:rotate(calc(var(--s,1)*1turn))}
+}

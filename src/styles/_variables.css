@@ -1,0 +1,7 @@
+:root {
+    --primary-color: blue;
+    --success-color: green;
+    --secondary-color: rgb(255, 89, 0);
+    --danger-color: red;
+    --default-color: gray;
+}
