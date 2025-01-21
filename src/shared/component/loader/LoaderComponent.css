@@ -17,36 +17,17 @@
 .loader {
   width: 50px;
   aspect-ratio: 1;
-  border: 2px solid var(--primary-color);
-  box-sizing: border-box;
-  border-radius: 50%;
-  display: grid;
-  animation: l11 1.5s infinite linear;
-  transform-origin: 50% 80%;
+  --_bg1: no-repeat radial-gradient(farthest-side, var(--primary-color) 94%, #f5000000);
+  --_bg2: no-repeat radial-gradient(farthest-side, var(--success-color) 94%, #f5000000);
+  background:
+    var(--_bg1) 0    0,
+    var(--_bg2) 100% 0,
+    var(--_bg1) 100% 100%,
+    var(--_bg2) 0    100%;
+  background-size: 40% 40%;
+  animation: dots 0.5s infinite;
 }
 
-.loader:before,
-.loader:after {
-  content: "";
-  grid-area: 1/1;
-  border: inherit;
-  border-radius: 50%;
-  animation: inherit;
-  animation-duration: 1s;
-  transform-origin: inherit;
-}
-
-.loader:before {
-  border-color: var(--success-color);
-}
-
-.loader:after {
-  border-color: var(--default-color);
-}
-
-.loader:after {
-  --s:-1;
-}
-@keyframes l11 {
-   100% {transform:rotate(calc(var(--s,1)*1turn))}
+@keyframes dots {
+  100% { background-position: 100% 0, 100% 100%, 0 100%, 0 0; }
 }
