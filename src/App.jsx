@@ -23,6 +23,7 @@ const App = () => {
     <>
       <LoaderComponent />
       <div className="container">
+        <h1> BOBOTA </h1>
         {/* content */}
       </div>
     </>
