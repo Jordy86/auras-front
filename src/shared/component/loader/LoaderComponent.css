@@ -15,7 +15,7 @@
 }
 
 .loader {
-  width: 50px;
+  width: 75px;
   aspect-ratio: 1;
   --_bg1: no-repeat radial-gradient(farthest-side, var(--primary-color) 94%, #f5000000);
   --_bg2: no-repeat radial-gradient(farthest-side, var(--success-color) 94%, #f5000000);
@@ -24,10 +24,11 @@
     var(--_bg2) 100% 0,
     var(--_bg1) 100% 100%,
     var(--_bg2) 0    100%;
-  background-size: 40% 40%;
-  animation: dots 0.5s infinite;
+  background-size: 35% 35%;
+  animation: dots 1s infinite;
 }
 
 @keyframes dots {
-  100% { background-position: 100% 0, 100% 100%, 0 100%, 0 0; }
+  50% { background-position: 100% 0, 100% 100%, 0 100%, 0 0; }
+  100% { background-position: 100% 100%, 0 100%, 0 0, 100% 0; }
 }
