@@ -1,0 +1,5 @@
+.content {
+	margin-top: 70px; 
+	margin-left: 0;
+	transition: margin-left 0.3s;
+}
