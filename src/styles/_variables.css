@@ -1,7 +1,10 @@
 :root {
-    --primary-color: blue;
-    --success-color: green;
-    --secondary-color: rgb(255, 89, 0);
-    --danger-color: red;
-    --default-color: gray;
+    --success-color: #57ab5a;
+    --gold-color: #D4AF37;
+    --dark-red-color: #8E3C40;
+    --off-white-color: #E7DDDE;
+    --light-gray-color: #8E8E8F;
+    --dark-gray-color: #323232;
+    --deep-black-color: #1C1C1D;
 }
+
