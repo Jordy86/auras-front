@@ -30,7 +30,7 @@ const Dashboard = () => {
       <AdminMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />
       <div className={`dashboard-content ${menuOpen ? "menu-open" : ""}`}>
         <div className="row">
-            <div className="card">
+            <div className={`card ${menuOpen ? "menu-open" : ""}`}>
               <h3>Chiffre d'affaire pour l'année {selectedYear} 
                   <select id="year" value={selectedYear} onChange={handleYearChange}>
                   {years.map((year) => (
@@ -42,7 +42,7 @@ const Dashboard = () => {
               </h3>
               <p>{revenue.toLocaleString()} Ariary</p> 
             </div>
-            <div className="card-rigth">
+            <div className={`card-rigth ${menuOpen ? "menu-open" : ""}`}>
                   Zavatra
             </div>
         </div>
