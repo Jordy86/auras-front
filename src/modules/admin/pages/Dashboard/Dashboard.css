@@ -1,7 +1,7 @@
 .dashboard-content {
 	transition: margin-left 0.3s ease-in-out;
 	margin-left: 0;
-	margin-top: 40px;
+	margin-top: 50px;
 	padding: 20px; 
 }
   
@@ -26,5 +26,43 @@
 		width: 150px;
 	}
 }
+
+.card {
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 38%; 
+	margin-left: 20px; 
+	float: left;
+	text-align: left;
+	transition: all 0.3s ease;
+}
+
+  .card-rigth {
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 58%; 
+	margin-left: 20px; 
+	float: left;
+	text-align: left;
+	transition: all 0.3s ease;
+  }
+
+  .card h3 {
+	color: #343a40;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	font-weight: 600;
+  }
   
+  .card p {
+	color: #097913;
+	font-size: 22px;
+	font-weight: bold;
+  }
+  #year{
+	font-size: 1rem;
+	margin-left: 30px;
+  }
   
