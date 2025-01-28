@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import AdminMenu from "./modules/admin/component/MenuAdmin/AdminMenu";
 import Login from "./modules/admin/pages/LoginAdmin/Login";
 import Dashboard from "./modules/admin/pages/Dashboard/Dashboard";
+import Product from "./modules/admin/pages/Product/Product";
 
 const App = () => {
   const { loadingOn, loadingOff } = useLoader();
@@ -30,6 +31,9 @@ const App = () => {
       </Routes>
       <Routes>
         <Route path="/admin/accueil" element={<Dashboard />} />
+      </Routes>
+      <Routes>
+        <Route path="/admin/product" element={<Product />} />
       </Routes>
       <LoaderComponent />
     </>
