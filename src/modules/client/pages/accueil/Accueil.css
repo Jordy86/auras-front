@@ -1,0 +1,17 @@
+@import url("../../../../styles/_variables.css");
+
+.accueil-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--deep-black-color);
+    min-height: 100dvh;
+}
+
+.accueil-container .nav-container {
+    flex-shrink: 0;
+}
+
+.accueil-container  .hero-container {
+    flex-grow: 1;
+}
+

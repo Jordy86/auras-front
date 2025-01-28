@@ -1,5 +1,6 @@
 export const menuItems = [
     "Accueil",
-    "Nos catégorie",
+    "Nos collection",
     "Produit populaire",
+    "Favoris"
 ];
