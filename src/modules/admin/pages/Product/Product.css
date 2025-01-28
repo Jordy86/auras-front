@@ -136,6 +136,11 @@
     border-bottom: 1px solid #ddd;
 }
 
+.product-table tr:hover {
+    background-color: #ece8e2;
+    cursor: pointer;
+}
+
 .product-table .col-end {
     text-align: right;
 }
@@ -184,7 +189,7 @@
 .product-card:hover {
     transform: translateY(-3px);
     /* Moins de mouvement au survol */
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 10px #e5ca9f;
 }
 
 /* Réduire la hauteur des images */
