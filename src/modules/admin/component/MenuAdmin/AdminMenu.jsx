@@ -44,7 +44,7 @@ const AdminMenu = ({ menuOpen, toggleMenu }) => {
               <i className="bi bi-speedometer2"></i> <span>Dashboard</span>
             </li>
           </Link>
-          <Link to="/admin/produit">
+          <Link to="/admin/product">
             <li className="nav-item">
               <i className="bi bi-box"></i> <span>Produit</span>
             </li>
