@@ -5,14 +5,19 @@
 	width: 100%;
 	box-shadow: 0px 1px 0px rgba(90, 1, 112, 0.1);
 	background-color: #ffffff;
-	padding: 10px 20px;
+    padding-left: 10px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
     z-index: 1001;
+    background-color: #106310c9;
 }
 .deconnexion{
     float: right;
 	border: none;
     font-size: 22px;
 	cursor: pointer;
+    color: white;
 }
 .nav-item i{
     font-size: 18px;
@@ -26,7 +31,7 @@
     left: 0;
     width: 250px;
     height: 100%;
-    background-color: #ffffff;
+    background-color: white;
     color: black;
     transform: translateX(-100%); 
     transition: transform 0.3s ease-in-out;
@@ -42,16 +47,17 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    margin-top: 50px;
-    margin-left: 8px
+    margin-top: 64px;
+    margin-left: 8px;
 }
 .nav-bar-left li {
     padding: 15px;
     cursor: pointer;
 }
 .nav-bar-left li:hover{
-    border-right: 3px solid;
-    background-color: #f8f8f8;
+    border-right: 3px solid green;
+    box-shadow: 2px 0px 1px 0px green;
+    background-color: white;
 }
 .nav-bar-left li a {
     text-decoration: none;
@@ -59,12 +65,32 @@
     font-size: 18px;
 }
 .nav-bar-left li a:hover {
-    background-color: #555;
+    background-color: red;
 }
 .menu-btn {
     font-size: 24px;
     cursor: pointer;
-    color: #333;
+    color: white;
     padding: 10px;
 }
-
+.nav-bar-left a{
+    text-decoration: none;
+    color: currentColor;
+}
+.logo{
+    float: left;
+    width: 10%;
+    height: 40px;
+  
+    
+}
+.logo h1{
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 2px 2px 4px rgba(255, 225, 53, 0.87);
+    color: #ffffff;
+    width: 140px;
+    height: 50px;
+    margin-top: -15px;
+    padding: 10px;
+}

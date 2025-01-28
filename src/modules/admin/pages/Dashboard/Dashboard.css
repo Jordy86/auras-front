@@ -1,5 +1,30 @@
-.content {
-	margin-top: 70px; 
+.dashboard-content {
+	transition: margin-left 0.3s ease-in-out;
 	margin-left: 0;
-	transition: margin-left 0.3s;
+	margin-top: 40px;
+	padding: 20px; 
 }
+  
+.dashboard-content.menu-open {
+	margin-left: 250px; 
+}
+
+@media (max-width: 768px) {
+	.dashboard-content.menu-open {
+		margin-left: 200px; 
+	}
+	.nav-bar {
+		width: 200px;
+	}
+}
+  
+@media (max-width: 576px) {
+	.dashboard-content.menu-open {
+		margin-left: 150px; 
+	}
+	.nav-bar {
+		width: 150px;
+	}
+}
+  
+  

@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import './AdminMenu.css';
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "./AdminMenu.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { Modal, Button } from "react-bootstrap";
+import Logo from '../../../../styles/images/Auras.PNG';
 
-const AdminMenu = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+
+
+const AdminMenu = ({ menuOpen, toggleMenu }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
   const click_deconnexion = () => {
-    setShowModal(true); 
+    setShowModal(true);
   };
 
   const closeModal = () => {
-    setShowModal(false); 
+    setShowModal(false);
   };
 
   const deconnexion = () => {
@@ -26,41 +25,58 @@ const AdminMenu = () => {
     alert("Vous avez été déconnecté !");
   };
 
-  
-
   return (
     <>
       <div className="header">
-        <span className="menu-btn" onClick={toggleMenu}><i className="bi bi-list"></i></span>
-        <span className="deconnexion" onClick={click_deconnexion}><i class="bi bi-power"></i></span>
+        <div className="logo"><h1>Auras</h1></div>
+        <span className="menu-btn" onClick={toggleMenu}>
+          <i className="bi bi-list"></i>
+        </span>
+        <span className="deconnexion" onClick={click_deconnexion}>
+          <i className="bi bi-power"></i>
+        </span>
       </div>
 
+      <aside id="sidebar" className={`nav-bar ${menuOpen ? "active" : ""}`}>
+        <ul className="nav-bar-left" id="sidebar-nav">
+          <Link to="/admin/accueil">
+            <li className="nav-item">
+              <i className="bi bi-speedometer2"></i> <span>Dashboard</span>
+            </li>
+          </Link>
+          <Link to="/admin/produit">
+            <li className="nav-item">
+              <i className="bi bi-box"></i> <span>Produit</span>
+            </li>
+          </Link>
+          <Link to="/admin/categorie">
+            <li className="nav-item">
+              <i className="bi bi-folder"></i> <span>Catégorie</span>
+            </li>
+          </Link>
+          <Link to="/admin/commande">
+            <li className="nav-item">
+              <i className="bi bi-file-text"></i> <span>Commande</span>
+            </li>
+          </Link>
+          <Link to="/admin/vente">
+            <li className="nav-item">
+              <i className="bi bi-cart"></i> <span>Vente</span>
+            </li>
+          </Link>
+          <Link to="/admin/statistique">
+            <li className="nav-item">
+              <i className="bi bi-graph-up"></i> <span>Statistique</span>
+            </li>
+          </Link>
+          <Link to="/admin/parametrage">
+            <li className="nav-item">
+              <i className="bi bi-gear"></i> <span>Paramétrage</span>
+            </li>
+          </Link>
+        </ul>
+      </aside>
 
-    <aside id="sidebar" className={`nav-bar ${menuOpen ? "active" : ""}`}>
-      <ul class="nav-bar-left" id="sidebar-nav">
-        <li class="nav-item">
-            <i class="bi bi-speedometer2"></i> <span>Dashboard</span>
-        </li>
-        <li class="nav-item">
-            <i class="bi bi-box"></i> <span>Produit</span>
-        </li>
-        <li class="nav-item">
-            <i class="bi bi-folder"></i> <span>Catégorie</span>
-        </li>
-        <li class="nav-item">
-            <i class="bi bi-file-text"></i> <span>Commande</span>
-        </li>
-        <li class="nav-item">
-            <i class="bi bi-cart"></i> <span>Vente</span>
-        </li>
-        <li class="nav-item">
-            <i class="bi bi-graph-up"></i> <span>Statistique</span>
-        </li>
-        <li class="nav-item">
-            <i class="bi bi-gear"></i> <span>Paramétrage</span>
-        </li>
-      </ul>
-  </aside>
       <Modal show={showModal} onHide={closeModal} centered>
         <Modal.Header closeButton>
           <Modal.Title>Déconnexion</Modal.Title>
@@ -69,8 +85,12 @@ const AdminMenu = () => {
           <p>Êtes-vous sûr(e) de vouloir vous déconnecter ?</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={closeModal}>Annuler</Button>
-          <Button variant="danger" onClick={deconnexion}>Confirmer</Button>
+          <Button variant="secondary" onClick={closeModal}>
+            Annuler
+          </Button>
+          <Button variant="danger" onClick={deconnexion}>
+            Confirmer
+          </Button>
         </Modal.Footer>
       </Modal>
     </>

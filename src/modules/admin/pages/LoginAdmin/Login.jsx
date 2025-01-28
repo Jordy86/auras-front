@@ -1,10 +1,12 @@
 import React, { useState } from "react";  // Retirer Input de l'import
 import './Login.css';
 import { Link } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const navigate = useNavigate();
+
     const handleLogin = (e) => {
         e.preventDefault();  
         navigate('/admin/accueil'); 
