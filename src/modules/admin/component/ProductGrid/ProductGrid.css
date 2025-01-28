@@ -1,0 +1,89 @@
+/* Réduire la taille de la grille */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Toujours 3 colonnes */
+    gap: 15px;
+    /* Espacement réduit entre les éléments */
+}
+
+/* Réduire la taille des cartes dans la grille */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    /* Coins légèrement moins arrondis */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover {
+    transform: translateY(-3px);
+    /* Moins de mouvement au survol */
+    box-shadow: 0 3px 10px #e5ca9f;
+}
+
+/* Réduire la hauteur des images */
+.product-image {
+    width: 100%;
+    height: 200px;
+    /* Hauteur réduite */
+    object-fit: cover;
+}
+
+/* Réduire les marges et la taille du texte dans les informations */
+.product-info {
+    padding: 10px;
+    text-align: left;
+}
+
+.product-name {
+    font-size: 1rem;
+    /* Réduction de la taille du texte */
+    font-weight: 600;
+    margin-bottom: 5px;
+    /* Moins d'espace en dessous */
+    color: #222;
+}
+
+.product-description {
+    font-size: 0.9rem;
+    /* Texte plus petit */
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.product-material {
+    font-size: 0.85rem;
+    /* Texte plus petit */
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-size: 1rem;
+    /* Réduction du prix */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Bouton plus compact */
+.product-action {
+    background-color: #8b8a8a;
+    color: #fff;
+    padding: 8px 15px;
+    /* Taille réduite */
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    /* Texte du bouton plus petit */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-action:hover {
+    background-color: #555;
+}
