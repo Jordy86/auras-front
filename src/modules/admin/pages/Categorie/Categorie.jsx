@@ -109,7 +109,7 @@ const Categorie = () => {
 
             {modalDeleteOpen && (
                 <div className="modal-overlay">
-                    <div className="modal-content">
+                    <div className="modal-content-delete">
                         <h3>Confirmation</h3>
                         <p>Voulez-vous vraiment supprimer <strong>{selectedCategory?.nom}</strong> ?</p>
                         <div className="modal-actions-delete">

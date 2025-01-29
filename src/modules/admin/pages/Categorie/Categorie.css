@@ -10,9 +10,6 @@
 }
 
 
-.categorie-table-container {
-    overflow-x: auto;
-}
 
 .categorie-table {
     width: 70%;
@@ -27,12 +24,6 @@
     text-align: left;
     font-size: 0.9rem;
     border-bottom: 1px solid #ddd;
-}
-
-
-
-.categorie-table .col-end {
-    text-align: right;
 }
 
 .categorie-table th {
@@ -79,7 +70,7 @@
 }
 
 
-.modal-content {
+.modal-content-delete{
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -211,7 +202,6 @@
     color: red;
 }
 
-/* Label */
 .modal-content-add label {
     display: block;
     text-align: left;
