@@ -1,13 +1,14 @@
 .dashboard-content {
 	transition: margin-left 0.3s ease-in-out;
 	margin-left: 0;
-	margin-top: 40px;
+	margin-top: 50px;
 	padding: 20px; 
 }
-  
+
 .dashboard-content.menu-open {
 	margin-left: 250px; 
 }
+
 
 @media (max-width: 768px) {
 	.dashboard-content.menu-open {
@@ -26,5 +27,105 @@
 		width: 150px;
 	}
 }
-  
+
+.card {
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 38%; 
+	height: 130px;
+	float: left;
+	text-align: left;
+	transition: all 0.3s ease;
+	margin-left: 20px; 
+}
+
+.card-rigth {
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: 58%; 
+	float: left;
+	text-align: left;
+	transition: all 0.3s ease;
+	margin-left: 10px;
+}
+.card-rigth.menu-open{
+	width: 57%; 
+}
+.card.menu-open{
+	width: 40%; 
+}
+.card.menu-open h3{
+	font-size: 20px;
+}
+.card-rigth.menu-open li {
+	font-size: 17px;
+}
+
+.card h3 {
+	color: #343a40;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	font-weight: 600;
+}
+
+.card p {
+	color: #0b480d;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#year{
+	font-size: 1rem;
+	margin-left: 20px;
+}
+
+.liste-nombre{
+	float: left;
+	width: 50%;
+}
+.stat-product{
+	float:left;
+	width: 50%;
+}
+
+.liste-nombre ul li{
+	list-style: none;
+	padding: 10px;
+	font-size: 18px;
+	font-weight: bold
+}
+
+.liste-nombre span{
+	color: #0b480d;
+}
+.card-title{
+	text-align: center;
+}
+.card-title span{
+	color: #c26c17;
+	font-weight: bold;
+}
+
+.card-commande {
+	border-radius: 8px;
+	box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgb(226, 226, 226);
+	padding: 20px;
+	width: 38%; 
+	float: left;
+	text-align: left;
+	transition: all 0.3s ease;
+	margin-left: 20px; 
+	margin-top: -210px;
+}
+.bg-secondary{
+	background-color: #0b480d !important;
+}
+
+.card-commande.menu-open{
+	margin-top: -180px;
+	width: 40%;
+
+}
   

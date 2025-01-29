@@ -1,0 +1,10 @@
+.container-categorie {
+	transition: margin-left 0.3s ease-in-out;
+	margin-left: 0;
+	margin-top: 50px;
+	padding: 20px; 
+}
+
+.container-categorie.menu-open {
+	margin-left: 250px; 
+}
