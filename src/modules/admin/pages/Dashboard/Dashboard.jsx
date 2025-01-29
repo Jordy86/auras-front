@@ -13,7 +13,7 @@ const Dashboard = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [selectedYear, setSelectedYear] = useState(2025);
   const [revenue, setRevenue] = useState(50000000);
-  const [chartKey, setChartKey] = useState(0); // Ajout d'un état pour forcer la mise à jour
+  const [chartKey, setChartKey] = useState(0); 
   const chartRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);

@@ -7,6 +7,7 @@ import AdminMenu from "./modules/admin/component/MenuAdmin/AdminMenu";
 import Login from "./modules/admin/pages/LoginAdmin/Login";
 import Dashboard from "./modules/admin/pages/Dashboard/Dashboard";
 import Product from "./modules/admin/pages/Product/Product";
+import Categorie from "./modules/admin/pages/Categorie/Categorie";
 
 const App = () => {
   const { loadingOn, loadingOff } = useLoader();
@@ -34,6 +35,9 @@ const App = () => {
       </Routes>
       <Routes>
         <Route path="/admin/product" element={<Product />} />
+      </Routes>
+      <Routes>
+        <Route path="admin/categorie" element={<Categorie/>} />
       </Routes>
       <LoaderComponent />
     </>
