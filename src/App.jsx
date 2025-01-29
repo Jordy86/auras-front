@@ -29,14 +29,8 @@ const App = () => {
     <>
       <Routes>
         <Route path="/admin/login" element={<Login />} />
-      </Routes>
-      <Routes>
         <Route path="/admin/accueil" element={<Dashboard />} />
-      </Routes>
-      <Routes>
         <Route path="/admin/product" element={<Product />} />
-      </Routes>
-      <Routes>
         <Route path="admin/categorie" element={<Categorie/>} />
       </Routes>
       <LoaderComponent />

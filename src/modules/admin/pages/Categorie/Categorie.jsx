@@ -3,7 +3,7 @@ import AdminMenu from '../../component/MenuAdmin/AdminMenu';
 import { useState } from 'react';
 
 const Categorie = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(true);
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     const [categories, setCategories] = useState([

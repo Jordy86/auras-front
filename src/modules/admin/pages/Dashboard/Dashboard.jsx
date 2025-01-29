@@ -10,7 +10,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 const Dashboard = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(true);
   const [selectedYear, setSelectedYear] = useState(2025);
   const [revenue, setRevenue] = useState(50000000);
   const [chartKey, setChartKey] = useState(0); 
