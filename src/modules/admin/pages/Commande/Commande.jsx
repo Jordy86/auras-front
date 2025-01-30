@@ -6,7 +6,8 @@ const Commande = () => {
     const [menuOpen, setMenuOpen] = useState(true);
     const [search, setSearch] = useState('');
     const [statusFilter, setStatusFilter] = useState('default');
-    const [sortBy, setSortBy] = useState('id');
+    const [sortBy, setSortBy] = useState('ref');
+    const [selectedCommande, setSelectedCommande] = useState(null);
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     const commandes = [
@@ -22,7 +23,6 @@ const Commande = () => {
         { id: 10, ref: 'absh-#466-sdff', date: '07-01-25', personne: 'Tsiory', contact: '0344391459', produit: 'Lunettes', quantite: 1, prix: '70.000 Ar', status: 'Inachevé' }
     ];
 
-    // Filter and sort based on input values
     const filteredCommandes = commandes
         .filter(commande => {
             if (statusFilter === 'default') return true;
@@ -34,10 +34,26 @@ const Commande = () => {
                 commande.produit.toLowerCase().includes(search.toLowerCase());
         })
         .sort((a, b) => {
-            if (sortBy === 'id') return a.id - b.id;
+            if (sortBy === 'ref') return a.ref.localeCompare(b.ref);
             if (sortBy === 'date') return new Date(a.date) - new Date(b.date);
             return a[sortBy].localeCompare(b[sortBy]);
         });
+
+    const handleRowClick = (commande) => {
+        if (commande.status === 'Inachevé') {
+            setSelectedCommande(commande);
+        }
+    };
+
+    const handleCloseModal = () => {
+        setSelectedCommande(null);
+    };
+
+    const handleSavePayment = () => {
+        // Logique pour enregistrer le paiement
+        console.log('Paiement enregistré pour la commande:', selectedCommande);
+        handleCloseModal();
+    };
 
     return (
         <>
@@ -51,9 +67,8 @@ const Commande = () => {
                     <div className="sort-search-container">
                         <div className="sort-select">
                             <label>
-                                Trier par:
-                                <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
-                                    <option value="id">ID</option>
+                            Trier par : <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+                                    <option value="ref">Réference</option>
                                     <option value="date">Date</option>
                                     <option value="personne">Personne</option>
                                     <option value="produit">Produit</option>
@@ -62,45 +77,45 @@ const Commande = () => {
                             </label>
                         </div>
 
-                        <input 
-                            type="text" 
-                            placeholder="Rechercher..." 
-                            className="search-bar" 
-                            value={search} 
-                            onChange={(e) => setSearch(e.target.value)} 
+                        <input
+                            type="text"
+                            placeholder="Rechercher..."
+                            className="search-bar"
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
                         />
-                    </div>
 
-                    <div className="status-filter-card">
-                        <h5>Filtrer par statut</h5>
-                        <div className="status-filter">
+                        <div className="status-filter-card">
+                            <h5>Filtrer par statut : </h5>
+                            <div className="status-filter">
                             <label>
-                                <input 
-                                    type="radio" 
-                                    name="status" 
-                                    value="default" 
-                                    checked={statusFilter === 'default'} 
-                                    onChange={() => setStatusFilter('default')} 
+                                <input
+                                    type="radio"
+                                    name="status"
+                                    value="default"
+                                    checked={statusFilter === 'default'}
+                                    onChange={() => setStatusFilter('default')}
                                 /> Tous
                             </label>
                             <label>
-                                <input 
-                                    type="radio" 
-                                    name="status" 
-                                    value="achevé" 
-                                    checked={statusFilter === 'achevé'} 
-                                    onChange={() => setStatusFilter('achevé')} 
+                                <input
+                                    type="radio"
+                                    name="status"
+                                    value="achevé"
+                                    checked={statusFilter === 'achevé'}
+                                    onChange={() => setStatusFilter('achevé')}
                                 /> Achevé
                             </label>
                             <label>
-                                <input 
-                                    type="radio" 
-                                    name="status" 
-                                    value="inachevé" 
-                                    checked={statusFilter === 'inachevé'} 
-                                    onChange={() => setStatusFilter('inachevé')} 
+                                <input
+                                    type="radio"
+                                    name="status"
+                                    value="inachevé"
+                                    checked={statusFilter === 'inachevé'}
+                                    onChange={() => setStatusFilter('inachevé')}
                                 /> Inachevé
                             </label>
+                        </div>
                         </div>
                     </div>
                 </div>
@@ -122,7 +137,7 @@ const Commande = () => {
                         </thead>
                         <tbody>
                             {filteredCommandes.map((commande, index) => (
-                                <tr key={commande.id}>
+                                <tr key={commande.id} onClick={() => handleRowClick(commande)}>
                                     <td>{index + 1}</td>
                                     <td>{commande.ref}</td>
                                     <td>{commande.date}</td>
@@ -143,6 +158,25 @@ const Commande = () => {
                     </table>
                 </div>
             </div>
+
+            {selectedCommande && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <div className='header-modal'>
+                            <span className="close" onClick={handleCloseModal}>&times;</span>
+                            <h2>Enregistrer le paiement</h2>
+                        </div>
+                        <p><b>Référence : </b> {selectedCommande.ref}</p>
+                        <p><b>Date : </b> {selectedCommande.date}</p>
+                        <p> <b>Personne :</b> {selectedCommande.personne}</p>
+                        <p><b>Contact :</b> {selectedCommande.contact}</p>
+                        <p><b>Produit : </b> {selectedCommande.produit}</p>
+                        <p><b> Quantité : </b> {selectedCommande.quantite}</p>
+                        <p><b>Prix total : </b> {selectedCommande.prix}</p>
+                        <button className='btn-confirm-add' onClick={handleSavePayment}>Enregistrer le paiement</button>
+                    </div>
+                </div>
+            )}
         </>
     );
 }

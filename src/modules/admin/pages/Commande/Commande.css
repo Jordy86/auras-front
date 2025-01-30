@@ -23,6 +23,7 @@
     text-align: left;
     font-size: 0.9rem;
     border-bottom: 1px solid #ddd;
+    cursor: pointer;
 }
 
 .commande-table th {
@@ -43,6 +44,7 @@
     border-radius: 5px;
     width: 300px;
     font-size: 16px;
+    cursor: text;
 }
 
 .status-filter {
@@ -55,6 +57,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    cursor: pointer;
 }
 
 .sort-select {
@@ -129,25 +132,36 @@
 .status-filter-card {
     border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 15px;
+    padding: 8px;
     background-color: #f9f9f9;
-    margin-top: 20px;
+    width: 47%;
 }
 
 .status-filter h5 {
     margin-bottom: 15px;
+
 }
+
+.status-filter-card h5{
+    font-size: 16px;
+    float: left;
+}
+
 
 .status-filter {
     display: flex;
     gap: 15px;
     font-size: 16px;
+    padding-left: 15px;
 }
 
 .status-filter label {
     display: flex;
     align-items: center;
     gap: 5px;
+}
+.status-filter input[type="radio"] {
+    accent-color: #c26c17; 
 }
 
 .commande-table {
@@ -174,4 +188,47 @@
 .bg-danger {
     background-color: #dc3545;
     color: white;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 30%;
+}
+
+.header-modal h2{
+    font-size: 20px;
+    color: #0b480d;
+}
+
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
