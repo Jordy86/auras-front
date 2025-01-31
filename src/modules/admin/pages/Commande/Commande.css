@@ -34,8 +34,6 @@
 .filters-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
 }
 
 .search-bar {
@@ -65,7 +63,7 @@
 }
 
 .sort-select select {
-    padding: 8px;
+    height: 43px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
@@ -108,7 +106,6 @@
     display: flex;
     gap: 20px;
     align-items: center;
-    margin-bottom: 20px;
 }
 
 .sort-select {
@@ -116,7 +113,6 @@
 }
 
 .sort-select select {
-    padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
@@ -213,6 +209,27 @@
     width: 30%;
 }
 
+.header-modal{
+    border-bottom: 2px solid #ddd;
+}
+.ajouter{
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: flex-end;
+    align-items: center;     
+
+}
+.btn-add {
+    padding: 8px 15px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 .header-modal h2{
     font-size: 20px;
     color: #0b480d;
@@ -232,3 +249,79 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+input::placeholder{
+    font-style: italic;
+}
+.input{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.input select,
+.input input[type="number"] {
+    flex: 1; 
+    padding: 8px; 
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input select {
+    appearance: none;
+    background-color: white; 
+    height: 40px;
+    accent-color: #c26c17; 
+
+}
+
+.input select option{
+    background-color: #f0f0f0;
+    color: #333; 
+    font-family: Arial, sans-serif; 
+    padding: 8px;
+}
+
+.row-buttons {
+    display: flex;
+    gap: 10px; 
+    margin-top: 10px;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+.btn-add-row, .btn-remove-row {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.btn-remove-row {
+    padding: 5px 12px;
+
+}
+
+.btn-remove-row {
+    background-color: #f44336;
+}
+
+
+.btn-remove-row:hover {
+    background-color: #d32f2f;
+}
+.modal-actions {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+}
+
+.total {
+    font-weight: bold; 
+    font-size: 16px; 
+    font-style: italic;
+    color: #333; 
+}
+
