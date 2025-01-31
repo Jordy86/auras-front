@@ -4,6 +4,8 @@ import Nav from "../../component/nav/Nav";
 import Hero from "../../component/hero/Hero";
 import ScrollLayout from "../../component/scroll-layout/Scroll-layout";
 import CardProduct from "../../component/card-product/Card-product";
+import Footer from "../../component/footer/Footer";
+import CategorySection from "../../component/category-section/Category-section";
 
 const Accueil = () => {
 
@@ -11,6 +13,7 @@ const Accueil = () => {
         <div className="accueil-container">
             <Nav className="nav-container" />    
             <Hero className="hero-container" />
+            <CategorySection />
             <div className="circlebg">
                 <ScrollLayout title="Nouveau produit">
                     <CardProduct
@@ -31,6 +34,7 @@ const Accueil = () => {
                     />
                 </ScrollLayout>
             </div>
+            <Footer />
         </div>
     );
 };

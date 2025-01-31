@@ -15,7 +15,7 @@ const Hero = () => {
                     with precision and passion. Each piece tells a unique story of beauty
                     and sophistication.
                     </p>
-                    <button className="explore-btn">Explore</button>
+                    <button className="explore-btn">Shop now</button>
                 </div>
                 <CircleBgAnimation size={300} top="30%" left="10%" />
                 <CircleBgAnimation size={300} top="5%" right="10%" />
