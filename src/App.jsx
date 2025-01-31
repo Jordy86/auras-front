@@ -2,6 +2,7 @@ import React from "react";
 import { useLoader } from "./context/LoaderContext";
 import LoaderComponent from "./shared/component/loader/LoaderComponent";
 import { useEffect } from "react";
+import Accueil from "./modules/client/pages/accueil/Accueil";
 
 const App = () => {
   const { loadingOn, loadingOff } = useLoader();
@@ -23,8 +24,7 @@ const App = () => {
     <>
       <LoaderComponent />
       <div className="container">
-        <h1> BOBOTA </h1>
-        {/* content */}
+        <Accueil/>
       </div>
     </>
   );

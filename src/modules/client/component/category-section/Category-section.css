@@ -1,0 +1,62 @@
+@import url("../../../../styles/_variables.css");
+
+.category-section-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem 3rem;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    max-height: 30rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.image-container img {
+    width: auto;
+    height: 30rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+    flex: 1;
+    padding: 1rem;
+    color: var(--off-white-color);
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.explore-button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    background-color: var(--dark-red-color);
+    color: var(--off-white-color);
+    border: 1px solid var(--dark-red-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.explore-button:hover {
+    background: none;
+}

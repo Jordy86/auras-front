@@ -1,0 +1,44 @@
+@import url("../../../../styles/_variables.css");
+
+.vertical-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.vertical-lines div {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.134);
+    animation: moveLines 12s linear infinite;
+}
+
+
+.vertical-lines .line1 {
+    left: 20%;
+}
+
+.vertical-lines .line2 {
+    left: 40%;
+}
+
+.vertical-lines .line3 {
+    left: 60%;
+}
+
+.vertical-lines .line4 {
+    left: 80%;
+}
+
+@keyframes moveLines {
+
+    25% { transform: translateX(-20px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}

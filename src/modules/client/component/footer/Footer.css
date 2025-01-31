@@ -1,0 +1,61 @@
+@import url("../../../../styles/_variables.css");
+
+.footer-container {
+    width: 100%;
+    height: 23rem;
+    background-color: var(--light-black-color);
+    color: var(--off-white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.footer-content {
+    margin: 0 7rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.none {
+    flex: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-content .info .title {
+    color: var(--off-white-color);
+    font-size: 3rem;
+}
+
+.contact {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.contact > div {
+    background: var(--dark-gray-color);
+    color: var(--off-white-color);
+    height: 3rem;
+    width: 16rem;
+    overflow: hidden;
+    margin-top: 1rem;
+    border-radius: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
