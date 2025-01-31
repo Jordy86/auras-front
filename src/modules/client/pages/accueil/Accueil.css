@@ -19,3 +19,7 @@
 .accueil-container .circlebg {
     background: var(--light-black-color);
 }
+
+.linebg {
+    position: relative;
+}

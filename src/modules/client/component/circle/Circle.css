@@ -2,7 +2,7 @@
 
 .circle {
     position: absolute;
-    background: radial-gradient(#8e3c4066, var(--deep-black-color));
+    background: radial-gradient(#8e3c4080, var(--deep-black-color));
     border-radius: 50%;
     transform: scale(1);
     animation: scaleCircle 7s infinite alternate ease-in-out;

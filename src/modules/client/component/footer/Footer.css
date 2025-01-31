@@ -1,0 +1,7 @@
+@import url("../../../../styles/_variables.css");
+
+.footer-container {
+    width: 100%;
+    height: 20rem;
+    background-color: var(--light-black-color);
+}

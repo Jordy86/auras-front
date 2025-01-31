@@ -18,11 +18,14 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    max-height: 30rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .image-container img {
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 30rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }

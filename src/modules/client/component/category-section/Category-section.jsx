@@ -1,29 +1,49 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import "./Category-section.css";
 import CircleBgAnimation from "../circle/Circle";
 
-const CategorySection = ({ flexDirection="row-reverse" } ) => {
-    const style = {
-        flexDirection: flexDirection    
-    };
+const CategorySection = ({ items, flexDirection = "row-reverse" }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
+        }, 10000);
+
+        return () => clearInterval(interval);
+    }, [items.length]);
 
     return (
-        <div className="category-section-container" style={style}>
+        <div className="category-section-container" style={{ flexDirection }}>
             <CircleBgAnimation size={400} top="0" right="30" />
             <div className="image-container">
-                <img 
-                    src="https://img.freepik.com/photos-gratuite/kit-carriere-modele-nature-morte_23-2150218026.jpg?t=st=1738291019~exp=1738294619~hmac=1b5f4d7453b249fa85b2ba22aa30d74f5cd377470e7228f81720525b7bff9f42&w=996" 
-                    alt="Collection de bijoux" 
-                />
+                <AnimatePresence mode="wait">
+                    <motion.img
+                        key={items[currentIndex].src}
+                        src={items[currentIndex].src}
+                        alt={items[currentIndex].title}
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: 50 }}
+                        transition={{ duration: 1 }}
+                    />
+                </AnimatePresence>
             </div>
             <div className="info-container">
-                <h2 className="title">Collection Femme</h2>
-                <p className="description">
-                    Découvrez notre collection de bijoux pour femmes, alliant élégance et originalité. 
-                    Chaque pièce est conçue avec soin pour sublimer votre beauté et exprimer votre style unique. 
-                    Adoptez l'exceptionnel !
-                </p>
-                <button className="explore-button">Explore</button>
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={items[currentIndex].title}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: -20 }}
+                        transition={{ duration: 1 }}
+                    >
+                        <h2 className="title">{items[currentIndex].title}</h2>
+                        <p className="description">{items[currentIndex].description}</p>
+                        <button className="explore-button">Explore</button>
+                    </motion.div>
+                </AnimatePresence>
             </div>
         </div>
     );
