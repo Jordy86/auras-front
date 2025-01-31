@@ -11,9 +11,7 @@ const Hero = () => {
                 <div className="hero-info">
                     <h1 className="title">Timeless Elegance</h1>
                     <p className="description">
-                    Discover our curated collection of exquisite jewelry pieces, crafted
-                    with precision and passion. Each piece tells a unique story of beauty
-                    and sophistication.
+                        La beauté dans chaque détail, l’élégance dans chaque bijou.
                     </p>
                     <button className="explore-btn">Shop now</button>
                 </div>
