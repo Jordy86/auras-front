@@ -1,0 +1,6 @@
+@import url("../../../../styles/_variables.css");
+
+.shop-container {
+    min-height: 100vh;
+    background-color: var(--deep-black-color);
+}

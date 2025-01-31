@@ -2,7 +2,7 @@ import React from "react";
 import { useLoader } from "./context/LoaderContext";
 import LoaderComponent from "./shared/component/loader/LoaderComponent";
 import { useEffect } from "react";
-import Accueil from "./modules/client/pages/accueil/Accueil";
+import Shop from "./modules/client/pages/shop/Shop";
 
 const App = () => {
   const { loadingOn, loadingOff } = useLoader();
@@ -24,7 +24,7 @@ const App = () => {
     <>
       <LoaderComponent />
       <div className="container">
-        <Accueil/>
+        <Shop />
       </div>
     </>
   );
