@@ -1,28 +1,8 @@
 import './Nav.css';
 import { Contact, Diamond, ShoppingCart } from "lucide-react";
 import { menuItems } from "./NavMenuItem";
-import { useEffect } from 'react';
 
 const Nav = () => {
-    useEffect( ()=> {
-        document.addEventListener("DOMContentLoaded", () => {
-            const nav = document.querySelector(".nav-container");
-            let lastScrollY = window.scrollY;
-            
-            window.addEventListener("scroll", () => {
-                const currentScrollY = window.scrollY;
-            
-                if (currentScrollY > lastScrollY) {
-                nav.classList.add("hidden");
-                } else {
-                nav.classList.remove("hidden");
-                }
-            
-                lastScrollY = currentScrollY;
-            });
-        });  
-    }, []);
-    
     return (
         <>
             <div className="nav-container">
@@ -51,7 +31,7 @@ const Nav = () => {
                     </div>
                 </div>
             </div>
-            <div class="header-spacer"></div>
+            <div className="header-spacer"></div>
         </>
     );
 };

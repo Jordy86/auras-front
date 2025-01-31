@@ -13,5 +13,9 @@
 
 .accueil-container  .hero-container {
     flex-grow: 1;
+    height: calc(100vh - var(--header-client-h));
 }
 
+.accueil-container .circlebg {
+    background: var(--dark-gold-color);
+}
