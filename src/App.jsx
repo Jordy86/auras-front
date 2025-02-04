@@ -11,6 +11,7 @@ import Categorie from "./modules/admin/pages/Categorie/Categorie";
 import Commande from "./modules/admin/pages/Commande/Commande";
 import Paiement from "./modules/admin/pages/Paiement/Paiement";
 import Parametrage from "./modules/admin/pages/Parametrage/Parametrage";
+import Statistique from "./modules/admin/pages/Statistique/Statistique";
 
 const App = () => {
   const { loadingOn, loadingOff } = useLoader();
@@ -38,6 +39,8 @@ const App = () => {
         <Route path="admin/commande" element={<Commande/>}/>
         <Route path="admin/paiement" element={<Paiement/>} />
         <Route path="admin/parametrage" element={<Parametrage/>} />
+        <Route path="admin/statistique" element={<Statistique/>} />
+
       </Routes>
       <LoaderComponent />
     </>
