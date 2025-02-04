@@ -9,6 +9,9 @@ import Dashboard from "./modules/admin/pages/Dashboard/Dashboard";
 import Product from "./modules/admin/pages/Product/Product";
 import Categorie from "./modules/admin/pages/Categorie/Categorie";
 import Commande from "./modules/admin/pages/Commande/Commande";
+import Paiement from "./modules/admin/pages/Paiement/Paiement";
+import Parametrage from "./modules/admin/pages/Parametrage/Parametrage";
+
 const App = () => {
   const { loadingOn, loadingOff } = useLoader();
   useEffect(()=>{
@@ -32,7 +35,9 @@ const App = () => {
         <Route path="/admin/accueil" element={<Dashboard />} />
         <Route path="/admin/product" element={<Product />} />
         <Route path="admin/categorie" element={<Categorie/>} />
-        <Route path="admin/commande" element={<Commande/>}></Route>
+        <Route path="admin/commande" element={<Commande/>}/>
+        <Route path="admin/paiement" element={<Paiement/>} />
+        <Route path="admin/parametrage" element={<Parametrage/>} />
       </Routes>
       <LoaderComponent />
     </>

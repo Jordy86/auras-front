@@ -59,9 +59,9 @@ const AdminMenu = ({ menuOpen, toggleMenu }) => {
               <i className="bi bi-file-text"></i> <span>Commande</span>
             </li>
           </Link>
-          <Link to="/admin/vente">
+          <Link to="/admin/paiement">
             <li className="nav-item">
-              <i className="bi bi-cart"></i> <span>Vente</span>
+            <i class="bi bi-credit-card"></i> <span>Paiement</span>
             </li>
           </Link>
           <Link to="/admin/statistique">

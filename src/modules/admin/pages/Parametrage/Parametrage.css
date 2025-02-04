@@ -1,0 +1,87 @@
+.parametrage-content {
+	transition: margin-left 0.3s ease-in-out;
+	margin-left: 0;
+	margin-top: 50px;
+	padding: 20px; 
+}
+
+.parametrage-content.menu-open {
+	margin-left: 250px; 
+}
+
+
+@media (max-width: 768px) {
+	.parametrage-content.menu-open {
+		margin-left: 200px; 
+	}
+	.nav-bar {
+		width: 200px;
+	}
+}
+  
+@media (max-width: 576px) {
+	.parametrage-content.menu-open {
+		margin-left: 150px; 
+	}
+	.nav-bar {
+		width: 150px;
+	}
+}
+
+.information{
+    margin-left: 2rem;
+}
+.parametrage-content h4{
+    font-family: 'Times New Roman', Times, serif;
+}
+.information img{
+    width: 10rem;
+}
+.card-parametre{
+    border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+    max-width: 38%;
+    max-height: 180px;
+	text-align: left;
+	transition: all 0.3s ease;
+	margin-left: 20px; 
+    margin-top: 20px;
+    float: left;
+}
+.card-parametre.menu-open{
+    max-width: 50%;
+}
+.card-parametre-contact{
+    border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+    width: 38%;
+    max-height: 180px;
+	text-align: left;
+	transition: all 0.3s ease;
+	margin-left: 20px; 
+    margin-top: 20px;
+    float: left;
+}
+.card-parametre-contact.menu-open{
+    width: 65%;
+}
+
+i{
+    cursor: pointer;
+}
+.change-password{
+    border-radius: 8px;
+	border: 1px solid;
+	padding: 10px;
+    width: 23rem;
+    height: 3rem;
+	text-align: left;
+	transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.modal-content-add img{
+    width: 10rem;
+}

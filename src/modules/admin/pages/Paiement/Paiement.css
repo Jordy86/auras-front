@@ -1,0 +1,29 @@
+.paiement-content {
+	transition: margin-left 0.3s ease-in-out;
+	margin-left: 0;
+	margin-top: 50px;
+	padding: 20px; 
+}
+
+.paiement-content.menu-open {
+	margin-left: 250px; 
+}
+
+
+@media (max-width: 768px) {
+	.paiement-content.menu-open {
+		margin-left: 200px; 
+	}
+	.nav-bar {
+		width: 200px;
+	}
+}
+  
+@media (max-width: 576px) {
+	.paiement-content.menu-open {
+		margin-left: 150px; 
+	}
+	.nav-bar {
+		width: 150px;
+	}
+}
