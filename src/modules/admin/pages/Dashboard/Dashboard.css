@@ -28,7 +28,7 @@
 	}
 }
 
-.card {
+.card-affaire {
 	border-radius: 8px;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 	padding: 20px;
@@ -38,6 +38,7 @@
 	text-align: left;
 	transition: all 0.3s ease;
 	margin-left: 20px; 
+	background-color: white;
 }
 
 .card-rigth {
@@ -48,28 +49,29 @@
 	text-align: left;
 	transition: all 0.3s ease;
 	margin-left: 10px;
+	background-color: white;
 }
 .card-rigth.menu-open{
 	width: 57%; 
 }
-.card.menu-open{
+.card-affaire.menu-open{
 	width: 40%; 
 }
-.card.menu-open h3{
+.card-affaire.menu-open h3{
 	font-size: 20px;
 }
 .card-rigth.menu-open li {
 	font-size: 17px;
 }
 
-.card h3 {
+.card-affaire h3 {
 	color: #343a40;
 	font-size: 1.5rem;
 	margin-bottom: 10px;
 	font-weight: 600;
 }
 
-.card p {
+.card-affaire p {
 	color: #0b480d;
 	font-size: 22px;
 	font-weight: bold;
@@ -118,6 +120,7 @@
 	transition: all 0.3s ease;
 	margin-left: 20px; 
 	margin-top: -210px;
+	background-color: white;
 }
 .bg-secondary{
 	background-color: #0b480d !important;
@@ -126,6 +129,50 @@
 .card-commande.menu-open{
 	margin-top: -180px;
 	width: 40%;
-
 }
+
+.list-groupa {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-groupa-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.list-groupa-item:last-child {
+    margin-bottom: 0;
+}
+
+.badge {
+    font-size: 0.875rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.card-chiffre-produit{
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+	width: 98%; 
+	margin-top: 15px;
+	text-align: left;
+	transition: all 0.3s ease;
+	margin-left: 20px; 
+	background-color: white;
+}
+.card-chiffre-produit .list-groupa-item{
+	margin-bottom: 0px;
+}
+
+
+
   

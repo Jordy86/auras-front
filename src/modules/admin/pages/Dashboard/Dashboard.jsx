@@ -13,7 +13,6 @@ const Dashboard = () => {
   const [menuOpen, setMenuOpen] = useState(true);
   const [selectedYear, setSelectedYear] = useState(2025);
   const [revenue, setRevenue] = useState(50000000);
-  const [chartKey, setChartKey] = useState(0); 
   const chartRef = useRef(null);
 
   const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -32,8 +31,6 @@ const Dashboard = () => {
       setRevenue(40000000);
     }
 
-    // Forcer la mise à jour du composant
-    setChartKey(prevKey => prevKey + 1);
   };
 
   const data = {
@@ -69,7 +66,7 @@ const Dashboard = () => {
       <AdminMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />
       <div className={`dashboard-content ${menuOpen ? "menu-open" : ""}`}>
         <div className="row">
-          <div className={`card ${menuOpen ? "menu-open" : ""}`}>
+          <div className={`card-affaire ${menuOpen ? "menu-open" : ""}`}>
             <h3>Chiffre d'affaire pour l'année {selectedYear}
               <select id="year" value={selectedYear} onChange={handleYearChange}>
                 {years.map((year) => (
@@ -87,34 +84,56 @@ const Dashboard = () => {
               <ul>
                 <li> <i className="bi bi-folder"></i> Type produit : <span>7</span> </li>
                 <li> <i className="bi bi-box"></i> Produit vendu : <span>40.000</span> </li>
-                <li><i className="bi bi-file-text"></i> Nombre commande : <span>17.000 </span></li>
+                <li><i className="bi bi-file-text"></i> Nombre commande : <span>1.700 </span></li>
                 <li><i className="bi bi-person"></i> Utilisateur : <span>1.000.000</span> </li>
               </ul>
             </div>
             <div className="stat-product">
               <div className="card-title"><span>Produit les plus achetés</span></div>
-              <Pie key={chartKey} ref={chartRef} data={data} /> {/* Utilisation de la clé pour forcer la mise à jour */}
+              <Pie ref={chartRef} data={data} /> 
             </div>
           </div>
         </div>
         <div className="row">
           <div className={`card-commande ${menuOpen ? "menu-open" : ""}`}>
             <div className="card-title"><span>Commande flash aujourd'hui</span></div>
-            <ul className="list-group">
-              <li className="list-group-item d-flex justify-content-between align-items-center">
+            <ul className="list-groupa">
+              <li className="list-groupa-item d-flex justify-content-between align-items-center">
                 Bague <span className="badge bg-secondary rounded-pill">14</span>
               </li>
-              <li className="list-group-item d-flex justify-content-between align-items-center">
+              <li className="list-groupa-item d-flex justify-content-between align-items-center">
                 Collier
                 <span className="badge bg-secondary rounded-pill">2</span>
               </li>
-              <li className="list-group-item d-flex justify-content-between align-items-center">
+              <li className="list-groupa-item d-flex justify-content-between align-items-center">
                 Bracelet
                 <span className="badge bg-secondary rounded-pill">3</span>
               </li>
-              <li className="list-group-item d-flex justify-content-between align-items-center">
+              <li className="list-groupa-item d-flex justify-content-between align-items-center">
                 Boucle d'oreille
                 <span className="badge bg-secondary rounded-pill">12</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="row">
+          <div className={`card-chiffre-produit ${menuOpen ? "menu-open" : ""}`}>
+            <div className="card-title"><span>Chiffre d'affaire par produit</span></div>
+            <ul className="list-groupa">
+              <li className="list-groupa-item d-flex justify-content-between align-items-center">
+                Bague <span className="">20.000.000 Ar</span>
+              </li>
+              <li className="list-groupa-item d-flex justify-content-between align-items-center">
+                Collier
+                <span className="">10.000.000 Ar</span>
+              </li>
+              <li className="list-groupa-item d-flex justify-content-between align-items-center">
+                Bracelet
+                <span className="">7.000.000 Ar</span>
+              </li>
+              <li className="list-groupa-item d-flex justify-content-between align-items-center">
+                Boucle d'oreille
+                <span className="">12.000.000 Ar</span>
               </li>
             </ul>
           </div>

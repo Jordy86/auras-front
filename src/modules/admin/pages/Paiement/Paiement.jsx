@@ -11,6 +11,7 @@ const Paiement = () => {
     const [productRows, setProductRows] = useState(1);
     const [produitsSelectionnes, setProduitsSelectionnes] = useState([]);
     
+    
     const addProductRow = () => {
         setProductRows(prevRows => prevRows + 1); 
     };

@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 import "./AdminMenu.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { Modal, Button } from "react-bootstrap";
-import Logo from '../../../../styles/images/Auras.PNG';
-
 
 
 const AdminMenu = ({ menuOpen, toggleMenu }) => {
@@ -19,11 +16,6 @@ const AdminMenu = ({ menuOpen, toggleMenu }) => {
     setShowModal(false);
   };
 
-  const deconnexion = () => {
-    setShowModal(false);
-    console.log("Déconnecté !");
-    alert("Vous avez été déconnecté !");
-  };
 
   return (
     <>
@@ -77,22 +69,18 @@ const AdminMenu = ({ menuOpen, toggleMenu }) => {
         </ul>
       </aside>
 
-      <Modal show={showModal} onHide={closeModal} centered>
-        <Modal.Header closeButton>
-          <Modal.Title>Déconnexion</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <p>Êtes-vous sûr(e) de vouloir vous déconnecter ?</p>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={closeModal}>
-            Annuler
-          </Button>
-          <Button variant="danger" onClick={deconnexion}>
-            Confirmer
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      {showModal &&(
+          <div className="modal-overlay">
+            <div className="modal-content-delete">
+                <h3>Confirmation</h3>
+                <p>Voulez-vous vraiment supprimer ? </p>
+                <div className="modal-actions-delete">
+                    <button className="btn-cancel" onClick={closeModal}>Annuler</button>
+                    <button className="btn-confirm">Deconnexion</button>
+                </div>
+            </div>
+          </div>
+      )}
     </>
   );
 };

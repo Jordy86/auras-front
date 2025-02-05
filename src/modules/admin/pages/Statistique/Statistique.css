@@ -27,3 +27,26 @@
 		width: 150px;
 	}
 }
+h3{
+	color: #c26c17;
+	font-weight: bold;
+	font-size: 20px;
+}
+.statistique-row1{
+
+}
+.stat-courbe-anne{
+	width: 60%;
+	float: left;
+}
+.chart-area{
+	width: 800px;
+	z-index: 1;
+}
+.stat-vente-mois{
+	float: left;
+	width: 40%;
+}
+.chart-area.menu-open{
+	width: 650px;
+}

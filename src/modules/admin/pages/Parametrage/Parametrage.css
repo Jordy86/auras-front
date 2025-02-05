@@ -25,6 +25,7 @@
 	}
 	.nav-bar {
 		width: 150px;
+        
 	}
 }
 
@@ -64,6 +65,7 @@
     margin-top: 20px;
     float: left;
 }
+
 .card-parametre-contact.menu-open{
     width: 65%;
 }
