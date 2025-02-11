@@ -1,0 +1,15 @@
+@use "../../../../styles/_variables.scss" as var;
+
+.custom-btn {
+    border-radius: 0.5rem;
+    border: 2px solid var.$dark-red-color;
+    color: var.$off-white-color;
+    background-color: var.$dark-red-color;
+    font-size: 1.03rem;
+    text-align: center;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        background: none;
+    }
+}

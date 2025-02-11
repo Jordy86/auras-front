@@ -41,19 +41,3 @@
   justify-content: center;
   margin-top: .5rem;
 }
-
-.card-product-container .descriptions .explore-btn button {
-  width: 8rem;
-  height: 2.2rem;
-  border-radius: 0.5rem;
-  border: 1px solid var.$dark-red-color;
-  color: var.$off-white-color;
-  background-color: var.$dark-red-color;
-  font-size: 1.02rem;
-  text-align: center;
-  transition: 0.1s ease-in-out;
-}
-
-.card-product-container .descriptions .explore-btn button:hover {
-    background: none;
-}

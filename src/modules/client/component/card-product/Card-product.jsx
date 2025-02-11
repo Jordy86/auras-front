@@ -1,5 +1,6 @@
 import React from "react";
 import "./Card-product.scss";
+import Button from "../button/Button";
 
 const CardProduct = (props) => {
 
@@ -11,8 +12,13 @@ const CardProduct = (props) => {
             </div>
             <div className="descriptions">
                 <div className="name">{props.name}</div>
-                <div className="explore-btn"><button>magasin</button></div>
-                
+                <div className="explore-btn">
+                    <Button 
+                        text="Shop"
+                        width="fit-content"
+                        padding='0.5rem 2rem'
+                    />
+                </div>
             </div>
         </div>
         </>

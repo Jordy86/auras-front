@@ -77,7 +77,7 @@ const Accueil = () => {
             >
                 <CategorySection items={items}/>
             </div>
-            <div className="circlebg">
+            <div>
                 <ScrollLayout title="Nouveau produit">
                     {products.map((product, index) => (
                         <div
