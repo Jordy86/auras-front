@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import WOW from "wowjs";
-import "./Accueil.css";
+import "./Accueil.scss";
 import Nav from "../../component/nav/Nav";
 import Hero from "../../component/hero/Hero";
 import ScrollLayout from "../../component/scroll-layout/Scroll-layout";

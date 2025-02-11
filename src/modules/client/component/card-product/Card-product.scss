@@ -1,4 +1,4 @@
-@import url("../../../../styles/_variables.css");
+@use "../../../../styles/_variables.scss" as var;
 
 .card-product-container {
   display: flex;
@@ -26,7 +26,7 @@
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   font-style: italic;
-  color: var(--off-white-color);
+  color: var.$off-white-color;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,9 +46,9 @@
   width: 8rem;
   height: 2.2rem;
   border-radius: 0.5rem;
-  border: 1px solid var(--dark-red-color);
-  color: var(--off-white-color);
-  background-color: var(--dark-red-color);
+  border: 1px solid var.$dark-red-color;
+  color: var.$off-white-color;
+  background-color: var.$dark-red-color;
   font-size: 1.02rem;
   text-align: center;
   transition: 0.1s ease-in-out;

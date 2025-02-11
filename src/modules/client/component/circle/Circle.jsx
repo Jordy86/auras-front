@@ -1,5 +1,5 @@
 import React from "react";
-import "./Circle.css";
+import "./Circle.scss";
 
 const CircleBgAnimation = ({ size = 300, top, left, right }) => {
     const style = {

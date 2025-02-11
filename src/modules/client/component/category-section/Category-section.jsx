@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Category-section.css";
+import "./Category-section.scss";
 import CircleBgAnimation from "../circle/Circle";
 
 const CategorySection = ({ items, flexDirection = "row-reverse" }) => {

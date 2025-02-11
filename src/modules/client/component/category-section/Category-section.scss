@@ -1,4 +1,4 @@
-@import url("../../../../styles/_variables.css");
+@use "../../../../styles/_variables.scss" as var;
 
 .category-section-container {
     display: flex;
@@ -33,7 +33,7 @@
 .info-container {
     flex: 1;
     padding: 1rem;
-    color: var(--off-white-color);
+    color: var.$off-white-color;
 }
 
 .title {
@@ -49,9 +49,9 @@
 .explore-button {
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
-    background-color: var(--dark-red-color);
-    color: var(--off-white-color);
-    border: 1px solid var(--dark-red-color);
+    background-color: var.$dark-red-color;
+    color: var.$off-white-color;
+    border: 1px solid var.$dark-red-color;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s ease;

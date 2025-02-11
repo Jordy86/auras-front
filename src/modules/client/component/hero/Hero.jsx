@@ -1,5 +1,5 @@
 import React from 'react';
-import './Hero.css';
+import './Hero.scss';
 import CircleBgAnimation from "../circle/Circle";
 import VerticaBgLines from "../vertical-bg-lines/Vertical-bg-lines";
 

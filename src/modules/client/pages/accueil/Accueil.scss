@@ -1,9 +1,9 @@
-@import url("../../../../styles/_variables.css");
+@use "../../../../styles/_variables.scss" as var;
 
 .accueil-container {
     display: flex;
     flex-direction: column;
-    background-color: var(--deep-black-color);
+    background-color: var.$deep-black-color;
     min-height: 100dvh;
 }
 
@@ -13,11 +13,11 @@
 
 .accueil-container  .hero-container {
     flex-grow: 1;
-    height: calc(100vh - var(--header-client-h));
+    height: calc(100vh - var.$header-client-h);
 }
 
 .accueil-container .circlebg {
-    background: var(--light-black-color);
+    background: var.$light-black-color;
 }
 
 .linebg {

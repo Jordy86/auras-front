@@ -1,10 +1,10 @@
-@import url("../../../../styles/_variables.css");
+@use "../../../../styles/_variables.scss" as var;
 
 .footer-container {
     width: 100%;
     height: 23rem;
-    background-color: var(--light-black-color);
-    color: var(--off-white-color);
+    background-color: var.$light-black-color;
+    color: var.$off-white-color;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,7 +37,7 @@
 }
 
 .footer-content .info .title {
-    color: var(--off-white-color);
+    color: var.$off-white-color;
     font-size: 3rem;
 }
 
@@ -47,8 +47,8 @@
 }
 
 .contact > div {
-    background: var(--dark-gray-color);
-    color: var(--off-white-color);
+    background: var.$dark-gray-color;
+    color: var.$off-white-color;
     height: 3rem;
     width: 16rem;
     overflow: hidden;

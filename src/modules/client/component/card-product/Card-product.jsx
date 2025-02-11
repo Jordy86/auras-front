@@ -1,5 +1,5 @@
 import React from "react";
-import "./Card-product.css";
+import "./Card-product.scss";
 
 const CardProduct = (props) => {
 

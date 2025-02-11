@@ -1,10 +1,10 @@
 import React from "react";
-import "./Filter.css";
+import "./Filter.scss";
 
 const Filter = () => {
     return (
         <div className="filter-container">
-            
+            bobota
         </div>
     );
 };

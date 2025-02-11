@@ -1,0 +1,8 @@
+@use "../../../../styles/variables" as var;
+
+.filter-container {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    height: 5rem;
+}

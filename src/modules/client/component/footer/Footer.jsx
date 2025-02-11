@@ -1,5 +1,5 @@
 import React from "react";
-import "./Footer.css";
+import "./Footer.scss";
 import Circle from "../../component/circle/Circle";
 
 const Footer = () => {
