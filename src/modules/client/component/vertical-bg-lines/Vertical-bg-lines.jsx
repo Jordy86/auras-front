@@ -1,5 +1,5 @@
 import React from "react";
-import "./Vertical-bg-lines.css";
+import "./Vertical-bg-lines.scss";
 
 const VerticalBgLines = ()=> {
 

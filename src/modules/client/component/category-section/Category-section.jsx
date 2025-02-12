@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "./Category-section.css";
+import "./Category-section.scss";
 import CircleBgAnimation from "../circle/Circle";
+import Button from "../button/Button";
 
 const CategorySection = ({ items, flexDirection = "row-reverse" }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -41,7 +42,7 @@ const CategorySection = ({ items, flexDirection = "row-reverse" }) => {
                     >
                         <h2 className="title">{items[currentIndex].title}</h2>
                         <p className="description">{items[currentIndex].description}</p>
-                        <button className="explore-button">Explore</button>
+                        <Button text={"Explore"}/>
                     </motion.div>
                 </AnimatePresence>
             </div>

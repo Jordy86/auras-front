@@ -1,6 +1,6 @@
 import React from "react";
 import { useLoader } from "../../../context/LoaderContext";
-import "./LoaderComponent.css";
+import "./LoaderComponent.scss";
 
 const LoaderComponent = () => {
   const { isLoading } = useLoader();

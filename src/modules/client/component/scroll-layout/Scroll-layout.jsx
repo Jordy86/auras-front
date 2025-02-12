@@ -1,5 +1,5 @@
 import React from "react";
-import "./Scroll-layout.css";
+import "./Scroll-layout.scss";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const ScrollLayout = (props)=> {

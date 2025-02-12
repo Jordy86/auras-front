@@ -1,4 +1,4 @@
-@import url("../../../styles/_variables.css");
+@use "../../../styles/_variables.scss" as var;
 
 .overlay {
     position: fixed;
@@ -17,13 +17,13 @@
 .loader {
   width: 75px;
   aspect-ratio: 1;
-  --_bg1: no-repeat radial-gradient(farthest-side, var(--dark-red-color) 94%, #f5000000);
-  --_bg2: no-repeat radial-gradient(farthest-side, var(--dark-gray-color) 94%, #f5000000);
+  $bg1: no-repeat radial-gradient(farthest-side, var.$dark-orange 94%, #f5000000);
+  $bg2: no-repeat radial-gradient(farthest-side, var.$dark-green 94%, #f5000000);
   background:
-    var(--_bg1) 0    0,
-    var(--_bg2) 100% 0,
-    var(--_bg1) 100% 100%,
-    var(--_bg2) 0    100%;
+    $bg1 0    0,
+    $bg2 100% 0,
+    $bg1 100% 100%,
+    $bg2 0    100%;
   background-size: 35% 35%;
   animation: dots 1s infinite;
 }

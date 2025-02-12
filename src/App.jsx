@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useLoader } from "./context/LoaderContext";
 import LoaderComponent from "./shared/component/loader/LoaderComponent";
-import { useEffect } from "react";
+import Shop from "./modules/client/pages/shop/Shop";
 import Accueil from "./modules/client/pages/accueil/Accueil";
 
 const App = () => {
@@ -24,7 +24,7 @@ const App = () => {
     <>
       <LoaderComponent />
       <div className="container">
-        <Accueil/>
+        <Shop />
       </div>
     </>
   );

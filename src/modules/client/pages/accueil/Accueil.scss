@@ -1,10 +1,10 @@
-@import url("../../../../styles/_variables.css");
+@use "../../../../styles/_variables.scss" as var;
 
 .accueil-container {
     display: flex;
     flex-direction: column;
-    background-color: var(--deep-black-color);
     min-height: 100dvh;
+    background-color: var.$light-background;
 }
 
 .accueil-container .nav-container {
@@ -13,11 +13,7 @@
 
 .accueil-container  .hero-container {
     flex-grow: 1;
-    height: calc(100vh - var(--header-client-h));
-}
-
-.accueil-container .circlebg {
-    background: var(--light-black-color);
+    height: calc(100vh - var.$header-client-h);
 }
 
 .linebg {

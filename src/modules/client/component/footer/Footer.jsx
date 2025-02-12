@@ -1,6 +1,5 @@
 import React from "react";
-import "./Footer.css";
-import Circle from "../../component/circle/Circle";
+import "./Footer.scss";
 
 const Footer = () => {
     return (
@@ -14,10 +13,11 @@ const Footer = () => {
                         <div className="tel">+261 00 000 00</div>
                     </div>
                 </div>
-                <div className="none">
-                    &copy; 2025 Elyse Mahefaniaina.
-                    <Circle/>
+                <div className="info2">
                 </div>
+            </div>
+            <div className="copy">
+            &copy; 2025 Elyse Mahefaniaina.
             </div>
         </div>
     );

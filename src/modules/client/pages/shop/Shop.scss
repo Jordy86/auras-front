@@ -1,0 +1,19 @@
+@use "../../../../styles/_variables.scss" as var;
+
+.shop-container {
+    min-height: 100vh;
+
+    .shop-content  {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .content {
+            min-width: 20rem;
+            width: 80%;
+            
+        }
+    }
+}
