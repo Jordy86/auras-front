@@ -24,7 +24,7 @@ const App = () => {
     <>
       <LoaderComponent />
       <div className="container">
-        <Accueil />
+        <Shop />
       </div>
     </>
   );

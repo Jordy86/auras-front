@@ -3,8 +3,8 @@
 .accueil-container {
     display: flex;
     flex-direction: column;
-    background-color: var.$deep-black-color;
     min-height: 100dvh;
+    background-color: var.$light-background;
 }
 
 .accueil-container .nav-container {

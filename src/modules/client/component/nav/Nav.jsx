@@ -1,3 +1,4 @@
+import React from 'react';
 import './Nav.scss';
 import { Contact, Diamond, ShoppingCart } from "lucide-react";
 import { menuItems } from "./NavMenuItem";

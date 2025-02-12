@@ -7,7 +7,11 @@ const Shop = () => {
     return (
         <div className="shop-container">
             <Nav />
-            <Filter />
+            <div className="shop-content">
+                <div className="content">
+                    <Filter />
+                </div>
+            </div>
         </div>
     );
 };

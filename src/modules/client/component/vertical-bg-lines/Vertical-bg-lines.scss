@@ -12,9 +12,9 @@
 .vertical-lines div {
     position: absolute;
     top: 0;
-    width: 2px;
+    width: 1px;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.134);
+    background-color: lighten(var.$dark-orange, $amount: 10);
     animation: moveLines 12s linear infinite;
 }
 

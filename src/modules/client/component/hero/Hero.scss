@@ -1,11 +1,10 @@
 @use "../../../../styles/_variables.scss" as var;
 
 .hero-container {
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var.$off-white-color;
+    color: var.$dark-text;
 }
 
 .hero-info {

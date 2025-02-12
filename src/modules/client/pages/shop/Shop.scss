@@ -2,5 +2,18 @@
 
 .shop-container {
     min-height: 100vh;
-    background-color: lighten(var.$deep-black-color, 10%);
+
+    .shop-content  {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .content {
+            min-width: 20rem;
+            width: 80%;
+            
+        }
+    }
 }

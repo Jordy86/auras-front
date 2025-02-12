@@ -17,8 +17,8 @@
 .loader {
   width: 75px;
   aspect-ratio: 1;
-  $bg1: no-repeat radial-gradient(farthest-side, var.$dark-red-color 94%, #f5000000);
-  $bg2: no-repeat radial-gradient(farthest-side, var.$dark-gray-color 94%, #f5000000);
+  $bg1: no-repeat radial-gradient(farthest-side, var.$dark-orange 94%, #f5000000);
+  $bg2: no-repeat radial-gradient(farthest-side, var.$dark-green 94%, #f5000000);
   background:
     $bg1 0    0,
     $bg2 100% 0,
