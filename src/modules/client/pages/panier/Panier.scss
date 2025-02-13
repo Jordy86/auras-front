@@ -1,0 +1,90 @@
+@use "../../../../styles/variables" as var;
+
+.panier-content {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+     .elements {
+        width: 85%;
+        padding-bottom: 2rem;
+
+        .checkout {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 1.3rem;
+            background-color: var.$off-white;
+            height: 3rem;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: var.$dark-text;
+            border-top-left-radius: 6px;
+            border-top-right-radius: 6px;
+            padding-left: 2rem;
+            box-sizing: border-box;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        }
+
+        .element {
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            height: 7rem;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            box-sizing: border-box;
+            padding-right: 1rem;
+
+            .img {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-right: 1px solid var.$dark-orange;
+
+                img{
+                    width: 7rem;
+                    height: 7rem;
+                    object-fit: cover;
+                } 
+            }
+            .descriptionn, .name, .price, .trush {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .descriptionn {
+                padding-left: 1rem;
+                height: 100%;
+                flex: 2;
+                border-right: 1px solid var.$dark-orange;
+            }
+
+            .name {
+                height: 100%;
+                flex: 1;
+                border-right: 1px solid var.$dark-orange;
+            }
+
+            .price {
+                height: 100%;
+                flex: 1;
+            }
+
+            .trush {
+                transition: 0.2s ease-in-out;
+                &:hover {
+                    color: var.$dark-orange;
+                }
+            }
+        }
+     }
+}

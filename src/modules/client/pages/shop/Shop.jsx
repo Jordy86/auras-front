@@ -39,6 +39,12 @@ const Shop = () => {
             description: "Un magnifique collier en perles, parfait pour une occasion spéciale."
         },
         {
+            img_src: "https://img.freepik.com/photos-gratuite/bracelets-faits-perles-pierres-colorees_114579-13013.jpg",
+            name: "Bracelet en perles",
+            price: 34.99,
+            description: "Un bracelet artisanal en perles et pierres colorées."
+        },
+        {
             img_src: "https://img.freepik.com/psd-gratuit/illustration-realiste-bague-mariage-isolee_23-2151551230.jpg",
             name: "Bague de fiançailles",
             price: 299.99,
@@ -97,12 +103,6 @@ const Shop = () => {
             name: "Boucle d'oreille stylée",
             price: 19.99,
             description: "Des boucles d'oreille modernes et tendance."
-        },
-        {
-            img_src: "https://img.freepik.com/photos-gratuite/bracelets-faits-perles-pierres-colorees_114579-13013.jpg",
-            name: "Bracelet en perles",
-            price: 34.99,
-            description: "Un bracelet artisanal en perles et pierres colorées."
         },
     ];
 
