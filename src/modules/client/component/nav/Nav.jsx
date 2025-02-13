@@ -1,7 +1,8 @@
 import React from 'react';
 import './Nav.scss';
-import { Contact, Diamond, ShoppingCart } from "lucide-react";
+import { Contact, ShoppingCart } from "lucide-react";
 import { menuItems } from "./NavMenuItem";
+import logo from "../../../../assets/image/logo.png";
 
 const Nav = () => {
     return (
@@ -9,7 +10,7 @@ const Nav = () => {
             <div className="nav-container">
                 <div className="nav-content">
                     <div className="nav-logo">
-                        <Diamond className="icon" />
+                        <img src={logo} alt=''/>
                     </div>
 
                     <div className="nav-menu">
