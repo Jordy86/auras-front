@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import "./Filter.scss";
+import { useLoader } from "../../../../context/LoaderContext";
 import { SlidersHorizontal } from "lucide-react";
 import Modal from "../../../../shared/component/Modal/Modal";
 import Select from "react-select";
 import { Slider, Box, Typography } from '@mui/material';
+import Button from "../button/Button";
+import "./Filter.scss";
 
 const Filter = () => {
+    const { loadingOn, loadingOff } = useLoader();
+
     const [isModalOpen, setModalOpen] = useState(false);
     const [categories, setCategories] = useState([]);
     const [types, setTypes] = useState([]);
@@ -22,6 +26,20 @@ const Filter = () => {
 
     const openModal = () => setModalOpen(true);
     const closeModal = () => setModalOpen(false);
+
+    const applyFilter = () => {
+        closeModal();
+        loadData();
+    }
+
+    const loadData = async () => {
+        loadingOn();
+        try {
+          await new Promise((resolve) => setTimeout(resolve, 2000));
+        } finally {
+          loadingOff();
+        }
+    };
 
     const categorie = [
         { value: "1", label: "Bracelet" },
@@ -125,6 +143,11 @@ const Filter = () => {
                         </Typography>
                     </Box>
                     </div>
+                </div>
+            </div>
+            <div className="apply-btn">
+                <div onClick={applyFilter}>
+                    <Button  text="Appliquer"/>
                 </div>
             </div>
         </Modal>
