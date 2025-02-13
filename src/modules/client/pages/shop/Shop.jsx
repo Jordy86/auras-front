@@ -3,6 +3,7 @@ import "./Shop.scss";
 import Nav from "../../component/nav/Nav";
 import Filter from "../../component/filter/Filter";
 import CardProductDetail from "../../component/card-product-detail/Card-product-detail";
+import Footer from "../../component/footer/Footer";
 
 const Shop = () => {
 
@@ -124,6 +125,7 @@ const Shop = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

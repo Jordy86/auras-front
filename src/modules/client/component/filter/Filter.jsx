@@ -25,11 +25,9 @@ const Filter = () => {
     };
 
     const openModal = () => setModalOpen(true);
-    const closeModal = () => setModalOpen(false);
-
-    const applyFilter = () => {
-        closeModal();
-        loadData();
+    const closeModal = () => {
+        setModalOpen(false);
+        loadData()    
     }
 
     const loadData = async () => {
@@ -146,7 +144,7 @@ const Filter = () => {
                 </div>
             </div>
             <div className="apply-btn">
-                <div onClick={applyFilter}>
+                <div onClick={closeModal}>
                     <Button  text="Appliquer"/>
                 </div>
             </div>
